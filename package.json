@@ -1,0 +1,14 @@
+{
+  "name": "cypress-example",
+  "version": "1.0.0",
+  "author": "kimulaco",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^4.4.1"
+  }
+}
