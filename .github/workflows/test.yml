@@ -1,0 +1,20 @@
+name: Test
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: yarn
+    - name: Run Test
+      uses: cypress-io/github-action@v1.16.1
+    - name: Upload E2E test videos
+      uses: actions/upload-artifact@v1
+      if: always()
+      with:
+        name: Cypress Videos
+        path: cypress/videos
