@@ -6,9 +6,11 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "start": "serve docs -p 3000",
     "test": "cypress run"
   },
   "devDependencies": {
-    "cypress": "^4.4.1"
+    "cypress": "^4.4.1",
+    "serve": "^11.3.0"
   }
 }
